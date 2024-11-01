@@ -20,4 +20,16 @@ export class CommonService {
     });
     return this._httpClient.post("https://ap.greatfuturetechno.com/login/", userLogin, { headers });
   }
+
+  // get all the party list
+  getPartyList = () => {
+    const token = localStorage.getItem("authToken");
+
+    const headers = new HttpHeaders({
+      "Authorization": `Token ${token}`,
+      "Content-Type": "application/json"
+    });
+
+    return this._httpClient.get("https://ap.greatfuturetechno.com/party/", { headers });
+  }
 }
