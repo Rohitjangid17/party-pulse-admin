@@ -1,0 +1,35 @@
+<header class="bg-white shadow-md">
+    <div class="flex justify-between items-center p-4">
+        <button (click)="toggleSidebar()" class="text-gray-600 focus:outline-none">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div class="flex items-center">
+            <button mat-button [matMenuTriggerFor]="menu" class="flex items-center">
+                <!-- <img src="../../../assets/user_image.jpg" class="h-10 w-10 rounded-full object-cover"
+                    alt="User Image" /> -->
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon>dialpad</mat-icon>
+                    <span>Users</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>dialpad</mat-icon>
+                    <span>Orders</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>dialpad</mat-icon>
+                    <span>Support Ticket</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>dialpad</mat-icon>
+                    <span>Settings</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>dialpad</mat-icon>
+                    <span>Logout</span>
+                </button>
+            </mat-menu>
+        </div>
+    </div>
+</header>

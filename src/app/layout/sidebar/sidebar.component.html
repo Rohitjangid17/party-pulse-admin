@@ -1,0 +1,15 @@
+<mat-nav-list>
+    <h1 class="!text-3xl text-center pt-5 text-white !tracking-[3px]">Party Pulse</h1>
+    <ul class="mt-8 px-2">
+        <ng-container *ngFor="let navlink of navlinkList">
+            <li class="mt-2">
+                <a mat-list-item [routerLink]="navlink.path" [routerLinkActive]="navlink.path ? 'active' : ''"
+                    [matTooltip]="navlink.title"
+                    class="flex items-center p-2 text-lg text-white transition-colors duration-300 hover:bg-white/10 !rounded-lg">
+                    <mat-icon class="!text-white" style="line-height: 1.5;">{{ navlink.icon }}</mat-icon>
+                    <span class="!text-white ml-3">{{ navlink.title }}</span>
+                </a>
+            </li>
+        </ng-container>
+    </ul>
+</mat-nav-list>
