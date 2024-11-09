@@ -1,0 +1,44 @@
+<div class="overflow-y-auto">
+    <app-page-header [pageTitle]="pageTitle" />
+
+    <!-- page subheader start here -->
+    <div class="flex items-center justify-end py-4">
+        <div class="flex items-center gap-x-2">
+            <button mat-icon-button class="leading-3 !text-[#4f966e]"
+                [ngClass]="{'border border-solid border-[#4f966e] rounded-[4px]': isListView}"
+                (click)="updateLocalStorage('list')">
+                <mat-icon>view_list</mat-icon>
+            </button>
+            <button mat-icon-button class="leading-3 !text-[#4f966e]"
+                [ngClass]="{'border border-solid border-[#4f966e] rounded-[4px]': !isListView}"
+                (click)="updateLocalStorage('grid')">
+                <mat-icon>grid_view</mat-icon>
+            </button>
+            <button
+                class="flex items-center gap-x-1 !bg-[#4f966e] !text-white py-2 px-4 rounded-md !text-sm !font-medium"
+                mat-raised-button routerLink="/add-new-party">
+                <mat-icon style="line-height: 22px;">add</mat-icon>
+                Add New Party
+            </button>
+        </div>
+    </div>
+    <!-- page subheader end here -->
+
+    <div class="h-96 !overflow-y-auto">
+        <ng-container *ngIf="!isListView; else elseListView">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <ng-container *ngFor="let party of parties">
+                    <app-card [data]="party" />
+                </ng-container>
+            </div>
+        </ng-container>
+        <ng-template #elseListView>
+            <div class="h-80 overflow-y-auto !rounded-lg">
+                <app-table [dataSource]="parties" [displayedColumns]="displayedColumns"></app-table>
+            </div>
+        </ng-template>
+    </div>
+</div>
+<ng-container *ngIf="isLoader">
+    <ngx-loading [show]="isLoader"></ngx-loading>
+</ng-container>

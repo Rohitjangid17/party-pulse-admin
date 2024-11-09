@@ -1,0 +1,9 @@
+<table mat-table class="!border !border-solid !border-gray-200" [dataSource]="dataSource">
+    <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column">
+        <th mat-header-cell class="!bg-[#4f966e] !border-b !border-solid !border-gray-200" *matHeaderCellDef> {{ column }} </th>
+        <td mat-cell class="!overflow-hidden !border-b !border-solid !border-gray-200" *matCellDef="let element"> {{ element[column] }} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

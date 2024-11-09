@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'party-pulse-admin' title`, () => {
+  it(`should have the 'party-pulse' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('party-pulse-admin');
+    expect(app.title).toEqual('party-pulse');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, party-pulse-admin');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, party-pulse');
   });
 });

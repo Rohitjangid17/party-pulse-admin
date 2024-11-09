@@ -1,0 +1,12 @@
+<mat-drawer-container>
+    <mat-drawer class="!rounded-none !bg-[#4f966e]" [mode]="sidebarMode" [opened]="sidebarOpened">
+        <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content>
+        <app-header (toggleSidebarForMe)="sidebarToggler()"></app-header>
+        <main class="px-4 !overflow-hidden">
+            <router-outlet></router-outlet>
+        </main>
+        <app-footer></app-footer>
+    </mat-drawer-content>
+</mat-drawer-container>

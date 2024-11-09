@@ -1,0 +1,247 @@
+<app-page-header [pageTitle]="pageTitle"></app-page-header>
+
+<div class="form-height overflow-y-auto">
+    <!-- add party form end here -->
+    <form>
+        <!-- Basic Details Section -->
+        <div class="bg-white shadow-sm border border-solid border-gray-200 rounded-lg p-4 mb-6">
+            <h3 class="!text-xl font-semibold text-gray-800 mb-4">Basic Details</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+
+                <!-- Name form field -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">Name</mat-label>
+                        <input matInput type="text" placeholder="Enter name" />
+                    </mat-form-field>
+                </div>
+
+                <!-- email form field start here -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">Email</mat-label>
+                        <input matInput type="text" name="email" placeholder="Enter email" />
+                    </mat-form-field>
+                </div>
+                <!-- email form field end here -->
+
+                <!-- Company Name form field -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">Company Name</mat-label>
+                        <input matInput type="text" placeholder="Enter company name" />
+                    </mat-form-field>
+                </div>
+
+
+                <!-- Mobile Number form field -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">Mobile Number</mat-label>
+                        <input matInput type="text" placeholder="Enter mobile number" />
+                    </mat-form-field>
+                </div>
+
+                <!-- Telephone Number form field -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">Telephone Number</mat-label>
+                        <input matInput type="text" placeholder="Enter telephone number" />
+                    </mat-form-field>
+                </div>
+
+                <!-- Whatsapp Number form field -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">Whatsapp Number</mat-label>
+                        <input matInput type="text" placeholder="Enter whatsapp number" />
+                    </mat-form-field>
+                </div>
+
+                <!-- date of birth form field start here -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">Date of Birth</mat-label>
+                        <input matInput [matDatepicker]="DOB">
+                        <mat-datepicker-toggle matIconSuffix [for]="DOB"></mat-datepicker-toggle>
+                        <mat-datepicker #DOB panelClass="datepicker-bottom"></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <!-- date of birth form field end here -->
+
+                <!-- date of birth form field start here -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">Anniversary Date</mat-label>
+                        <input matInput [matDatepicker]="anniversaryDate" placeholder="Select date">
+                        <mat-datepicker-toggle matIconSuffix [for]="anniversaryDate"></mat-datepicker-toggle>
+                        <mat-datepicker #anniversaryDate panelClass="datepicker-bottom"></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <!-- date of birth form field end here -->
+
+                <!-- gst number form field start here -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">GST Number</mat-label>
+                        <input matInput type="text" placeholder="Enter GST number" />
+                    </mat-form-field>
+                </div>
+                <!-- gst number form field end here -->
+
+                <!-- pan number form field start here -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">Pan Number</mat-label>
+                        <input matInput type="text" placeholder="Enter Pan number" />
+                    </mat-form-field>
+                </div>
+                <!-- pan number form field end here -->
+
+                <!-- credit limit form field start here -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">Credit Limit</mat-label>
+                        <input matInput type="text" placeholder="Enter credit limit" />
+                    </mat-form-field>
+                </div>
+                <!-- credit limit form field end here -->
+
+                <!-- apply tds form field start here -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-label class="text-gray-700 mr-4">Apply TDS</mat-label>
+                    <mat-slide-toggle></mat-slide-toggle>
+                </div>
+                <!-- apply tds form field end here -->
+
+                <!-- login access form field start here -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-label class="text-gray-700 mr-4">Login Access</mat-label>
+                    <mat-slide-toggle></mat-slide-toggle>
+                </div>
+                <!-- login access form field end here -->
+
+                <div class="col-span-3">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label>Remark</mat-label>
+                        <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3"
+                            cdkAutosizeMaxRows="10" placeholder="Enter remark"></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bank Details Section -->
+        <div class="bg-white shadow-sm border border-solid border-gray-200 rounded-lg p-4 mb-6">
+            <h3 class="!text-xl font-semibold text-gray-800 mb-4">Bank Details</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+
+                <!-- Bank IFSC Code form field -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">Bank IFSC Code</mat-label>
+                        <input matInput type="text" placeholder="Enter bank IFSC code" />
+                    </mat-form-field>
+                </div>
+
+                <!-- Bank Name form field -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">Bank Name</mat-label>
+                        <input matInput type="text" placeholder="Enter bank name" />
+                    </mat-form-field>
+                </div>
+
+                <!-- Branch Name form field -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">Branch Name</mat-label>
+                        <input matInput type="text" placeholder="Enter branch name" />
+                    </mat-form-field>
+                </div>
+
+                <!-- Account Number form field -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">Account Number</mat-label>
+                        <input matInput type="text" placeholder="Enter account number" />
+                    </mat-form-field>
+                </div>
+
+                <!-- Account Holder Name form field -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">Account Holder Name</mat-label>
+                        <input matInput type="text" placeholder="Enter account holder's name" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+
+        <!-- Address Details Section -->
+        <div class="bg-white shadow-sm border border-solid border-gray-200 rounded-lg p-4 mb-6">
+            <h3 class="!text-xl font-semibold text-gray-800 mb-4">Address Details</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+
+                <!-- Address Line 1 form field -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">Address Line 1</mat-label>
+                        <input matInput type="text" placeholder="Enter address line 1" />
+                    </mat-form-field>
+                </div>
+
+                <!-- Address Line 2 form field -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">Address Line 2</mat-label>
+                        <input matInput type="text" placeholder="Enter address line 2" />
+                    </mat-form-field>
+                </div>
+
+                <!-- City form field -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">City</mat-label>
+                        <input matInput type="text" placeholder="Enter city" />
+                    </mat-form-field>
+                </div>
+
+                <!-- State form field -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">State</mat-label>
+                        <input matInput type="text" placeholder="Enter state">
+                    </mat-form-field>
+                </div>
+
+                <!-- Country form field -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">Country</mat-label>
+                        <input matInput type="text" placeholder="Enter country">
+                    </mat-form-field>
+                </div>
+
+                <!-- Pincode form field -->
+                <div class="col-span-3 sm:col-span-2 md:col-span-1">
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label class="text-gray-700">Pincode</mat-label>
+                        <input matInput type="text" placeholder="Enter pincode">
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-right">
+            <button mat-raised-button type="submit"
+                class="!bg-[#4f966e] !text-white py-2 px-4 !rounded-md !text-sm !font-medium">Submit</button>
+        </div>
+    </form>
+    <!-- add party form end here -->
+</div>
+
+<ng-container *ngIf="isLoader">
+    <ngx-loading [show]="isLoader"></ngx-loading>
+</ng-container>
